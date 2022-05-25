@@ -39,9 +39,9 @@ public class ShowServlet extends HttpServlet {
         em.close();
 
         // メッセージデータをリクエストスコープにセットしてshow.jspを呼び出す
-        request.setAttribute("Task", t);
+        request.setAttribute("task", t);
 
-        RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/Tasks/show.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/tasks/show.jsp");
         rd.forward(request, response);
     }
 }
